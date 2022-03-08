@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>To do list with Notifications</title>
+
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="assets/css//style.css">
+
+    <script src="assets/js/todo_v2.js" async></script>
+</head>
+<body>
+    <h1>To do list</h1>
+    <div class="task-box">
+        <ul id="task_list"></ul>
+        <button id="clear_list">Remove all tasks</button>
+       <div class="form-box">
+            <h2>Add new to do.</h2>
+            <form id="task_form">
+                <div class="full-width">
+                    <label for="title">Task title:</label>
+                    <input type="text" id="title" name="title" required>
+                </div>
+
+                <div class="half-width">
+                    <label for="deadline-date">Date:</label>
+                    <input type="date" id="deadline-date" name="deadline-date" required>
+                </div>
+                <div class="half-width">
+                    <label for="deadline-time">Time:</label>
+                    <input type="time" id="deadline-time" name="deadline-time" required>
+                </div>
+                <div class="full-width">
+                    <label for="ask_notify">Notify me</label>
+                    <input id="ask_notify" type="checkbox" name="notify" checked/>
+                    <p>Note: You can't be notified if notifications are disabled</p>
+                </div>
+                <div class="full-width">
+                    <input type="submit" id="submit" value="Add Task">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="toolbar">
+        <ul id="logs"></ul>
+        <p id="notification_status"></p>
+        <button id="enable_notifs" value="0">Enable notifications</button>
+    </div>
+</body>
+</html>
